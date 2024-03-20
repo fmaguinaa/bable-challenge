@@ -1,0 +1,19 @@
+import { StatusBar } from "expo-status-bar";
+import { withExpoSnack } from "nativewind";
+
+import { View } from "react-native";
+import { Header, Content } from "./components";
+import {NavigationContainer} from '@react-navigation/native';
+
+const App = () => (
+  <NavigationContainer>
+    <View className="flex-1 items-center justify-center bg-white">
+      <Header />
+      <Content>
+        <StatusBar style="auto" />
+      </Content>
+    </View>
+  </NavigationContainer>
+);
+
+export default withExpoSnack(App);
